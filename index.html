@@ -45,12 +45,13 @@
 
     <script>
         // Use window.location.replace to avoid back-button loops
-        const appUri = "com.cygames.umamusume://";
+        const encodedUri = "Y29tLmN5Z2FtZXMudW1hbXVzdW1lOi8v"; 
+        const decodedUri = atob(encodedUri);
         const iosStore = "https://apps.apple.com/us/app/id6480433538";
         const androidStore = "https://play.google.com/store/apps/details?id=com.cygames.umamusume";
 
         // Try to launch the app immediately
-        window.location.replace(appUri);
+        window.location.replace(decodedUri);
 
         const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
